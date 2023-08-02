@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelectorAll 로 HTML 요소 찾기</title>
+</head>
+<body>
+    <h2>JavaScript HTML DOM</h2>
+    <p>쿼리 선택기로 HTML 요소 찾기</p>
+    <p class="intro">Hello World!</p>
+    <p class="intro">이번 실습은 <b>querySelectorAll</b> 메서드를 실습하고 있습니다!</p>
+    <p>참고 사이트는 <b><a href="https://www.w3schools.com/js/js_htmldom_elements.asp">이쪽</a></b>
+        입니다.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const x = document.querySelectorAll("p.intro");
+        document.getElementById("demo").innerHTML = 'class = "intro"가 있는 첫 번째 문단(인덱스 0)은 : '
+            + x[0].innerHTML;
+        //querySelector()은 특정 name, id, class를 제한하지 않고 css 선택자를 사용하여
+        //요소를 찾는다. 만일 같은 id 또는 class일 경우 스크립트의 최상단 요소만 포함한다.
+        //querySelectorAll()은 querySelector()과 사용방법이 동일하며 선택자를 선택한 후
+        //배열과 비슷한 객체인 nodeList를 반환한다.
+    </script>
+</body>
+</html>
