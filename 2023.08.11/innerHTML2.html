@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML로 HTML 내 요소의 내용 변경하기</title>
+</head>
+<body>
+    <h1 id="text">Old Heading</h1>
+
+    <script>
+        const element = document.getElementById("text");
+        //element라는 변수 안에 id가 text인 요소를 저장
+        element.innerHTML = "New Heading";
+        //이후 element를 불러와 요소 안에 있는 내용을 변경
+    </script>
+</body>
+</html>

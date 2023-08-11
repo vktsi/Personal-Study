@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 속성값 변경하기</title>
+</head>
+<body>
+    <img id="img01" src="image/cat01.jpg">
+    <button id="bt01">chage!</button>
+    <script>
+        const btn = document.getElementById("bt01");
+
+        btn.addEventListener("click", clickEvent);
+
+        function clickEvent(){
+            document.getElementById("img01").src = "image/cat02.jpg";
+        }
+        
+    </script>
+</body>
+</html>
