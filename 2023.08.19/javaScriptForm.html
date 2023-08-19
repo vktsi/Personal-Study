@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript의 양식 유효성 검사</title>
+
+    <script>
+        function validateForm() {
+            let x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                //필드가 공백일 경우
+                alert("이름을 입력해주세요.");
+                return false;
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <h2>JavaScript의 양식 검사</h2>
+
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        이름: <input name="fname" type="text">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

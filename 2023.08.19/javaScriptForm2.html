@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript의 유효성 검사 실습 문제 연습</title>
+</head>
+<body>
+    <h2>실습 문제 연습</h2>
+    
+    <p>1부터 10 사이의 숫자를 입력해주세요.</p>
+    
+    <input id="numinput">
+
+    <button type="button" onclick="onclickEvent()">확인</button>
+
+    <p id="demo"></p>
+    <!-- 밑에 상태를 띄워줄 텍스트 칸 -->
+
+    <script>
+        function onclickEvent(){
+            let x = document.getElementById("numinput").value;
+            let text;
+
+            if(x < 1 || x > 10){
+                text = "1에서 10 사이의 숫자만 입력해주세요."
+            }
+            else{
+                text = "확인되었습니다."
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+</body>
+</html>

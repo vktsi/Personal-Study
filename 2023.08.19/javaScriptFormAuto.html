@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript의 유효성 자동 검사</title>
+</head>
+<body>
+    <h2>JavaScript의 유효성 자동 검사</h2>
+
+    <form action="/action_page.php" method="post">
+        <input type="text" name="fname" required>
+        <!-- 필드가 비어있을 시 required 속성으로 인해 양식 유효성을 브라우저에서 자동으로 검사 -> 양식이 제출되지 않음 -->
+        <input type="submit" value="Submit">
+    </form>
+    <p>필드를 작성하지 않고 "Submit" 버튼을 클릭하면 브라우저 내에 오류 메세지가 표시됩니다.</p>
+</body>
+</html>

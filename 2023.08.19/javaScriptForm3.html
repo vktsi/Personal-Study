@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript의 유효성 검사 실습 문제 연습 2</title>
+
+    <script>
+        function myFun(){
+            let x = document.forms["myForm"]["fname"].value;
+
+            if(x == ""){
+                alert ("1에서 10 사이의 숫자를 입력해주세요.");
+                return false;
+            }
+            else if(x < 1 || x > 10){
+                alert("1에서 10 사이의 숫자를 입력해주세요.");
+                return false;
+            }
+            else{
+                alert("확인되었습니다.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>실습 문제 연습</h2>
+    <p>1에서 10 사이의 숫자를 입력해주세요.</p>
+
+    <form name="myForm" onsubmit="return myFun()">
+    <input type="text" name="fname">
+    <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
