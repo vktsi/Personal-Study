@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트를 통해 HTML 요소의 스타일 변경하기</title>
+</head>
+<body>
+    <h1>버튼을 눌러 텍스트의 
+        <p id="text1">색상을</p>
+        변경해보세요!</h1>
+
+    <button type="button" onclick="document.getElementById('text1')
+        .style.color = 'red'">
+        <!-- "" 의 안에는 ""가 들어가면 안되고 '' 만 사용이 가능하다 -->
+    Click Me!</button>
+</body>
+</html>
