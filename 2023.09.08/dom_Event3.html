@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 이벤트 예제 3</title>
+</head>
+<body>
+    <h2>JavaScript HTML 이벤트</h2>
+    <p>버튼을 클릭하면 현재 날짜가 표시됩니다!</p>
+
+    <button onclick="displayDate()">지금은 몇시일까요?</button>
+
+    <script>
+        function displayDate(){
+            document.getElementById("demo").innerHTML = Date();
+        }
+    </script>
+    
+    <p id="demo"></p>
+    <!-- 현재 날짜와 시간을 표기해줄 칸 -->
+</body>
+</html>

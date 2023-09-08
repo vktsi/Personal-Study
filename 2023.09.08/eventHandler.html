@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 핸들러 예제</title>
+</head>
+<body>
+    <h2>이벤트 핸들러를 알아보기 위해 아래 버튼을 클릭해보세요!</h2>
+
+    <button id="mybutton">click Me🖐!</button>
+
+    <script>
+        document.getElementById("mybutton").addEventListener("click", function(){
+            alert("버튼이 클릭되었습니다 :)!")
+        });
+    </script>
+</body>
+</html>

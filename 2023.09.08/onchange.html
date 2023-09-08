@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onchange 예제</title>
+</head>
+<body>
+    <h2>JavaScript HTML 이벤트</h2>
+    <p>이름을 입력해주세요.</p>
+    <input type="text" id="fname" onchange="upperCase()">
+    <p>입력 필드를 벗어나면 입력 텍스트를 대문자로 변환하는 기능이 작동합니다.</p>
+
+    <script>
+        function upperCase(){
+            const x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+    </script>
+</body>
+</html>

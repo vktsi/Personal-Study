@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 이벤트 예제 2</title>
+</head>
+<body>
+    <h2>JavaScript HTML 이벤트</h2>
+    <h2 onclick="changeText(this)">여기를 클릭해보세요🖐!</h2>
+    <!-- 특별한 id 생성 없이도 onclick 이벤트 적용 가능 -->
+    <script>
+        function changeText(id){
+            id.innerHTML = "쨘 ✨";
+        }
+    </script>
+</body>
+</html>

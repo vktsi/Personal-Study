@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<style>
+    #container {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background: yellow;
+    }
+
+    #animate {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-color: red;
+    }
+</style>
+
+<body>
+
+    <p><button onclick="myMove()">Click Me</button></p>
+
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+
+    <script>
+        function myMove() {
+            let id = null;
+            const elem = document.getElementById("animate");
+            let pos = 0;
+            clearInterval(id);
+            //clearInterval의 값 초기화
+            id = setInterval(frame, 5);
+            //frame이라는 이름의 function 실행 
+            function frame() {
+                if (pos == 350) {
+                    //만일 pos의 값이 350이라면
+                    clearInterval(id);
+                    //id라는 setInterval을 중단시켜줌
+                } else {
+                    pos++;
+                    //실시간으로 pos 값을 더해준다.
+                    elem.style.top = pos + "px";
+                    elem.style.left = pos + "px";
+                    //elem의 top과 letf(사실 주석처리해도 작동하기는 함) 
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

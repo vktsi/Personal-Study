@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onmouseout / onmouseover 이벤트 예제</title>
+</head>
+<body>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+    style="background-color: #D94A38; width: 180px; height: 20px; 
+    padding: 40px;">
+    마우스를 올려보세요🖐
+    </div>
+
+    <script>
+        function mOver(obj){
+            obj.innerHTML = "Thank You!"
+        }
+
+        function mOut(obj) {
+            obj.innerHTML = "마우스를 올려보세요🖐"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onload 이벤트 사용해보기</title>
+</head>
+<body onload="checkCookies()">
+    <h2>JavaScript HTML 이벤트</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        function checkCookies(){
+            var text = "";
+            if(navigator.cookieEnabled == true){
+                text = "쿠키가 활성화되었습니다. 🍪";
+            } else {
+                text = "쿠키가 활성화되지 않았습니다.";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+</body>
+</html>
