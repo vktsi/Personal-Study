@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 이벤트 리스너 예제 실습 6</title>
+
+    <style>
+        #myDiv1, #myDiv2{
+            background-color: coral;
+            padding: 50px;
+        }
+        #myP1, #myP2{
+            background-color: white;
+            font-size: 20px;
+            border: 1px solid;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>JavaScript addEventListener()</h2>
+
+    <div id="myDiv1">
+        <h2>Bubbling : </h2>
+        <p id="myP1">Click Me!</p>
+    </div> <br>
+
+    <div id="myDiv2">
+        <h2>Capturing : </h2>
+        <p id="myP2">Click Me!</p>
+    </div>
+    
+    <script>
+        document.getElementById("myP1").addEventListener("click", function() {
+            alert("흰색 요소를 클릭했습니다!");
+        }, false);
+
+        document.getElementById("myDiv1").addEventListener("click", function() {
+            alert("오렌지색 요소를 클릭했습니다!");
+        }, false);
+
+        document.getElementById("myP2").addEventListener("click", function() {
+            alert("흰색 요소를 클릭했습니다!");
+        }, true);
+
+        document.getElementById("myDiv2").addEventListener("click", function() {
+            alert("오렌지색 요소를 클릭했습니다!");
+        }, true);
+
+    </script>
+</body>
+
+</html>

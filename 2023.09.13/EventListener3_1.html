@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 이벤트 리스너 예제 실습 3</title>
+</head>
+<body>
+    <h2>JavaScript addEventListener()</h2>
+
+    <p>이번 예제는 addEventListener() 메서드를 사용하여 한 버튼에 두 개의 클릭 이벤트를 추가하는 예제입니다,</p>
+
+    <button id="myBtn">Click Me!</button>
+
+    <script>
+        var x = document.getElementById("myBtn");
+        x.addEventListener("click", myFunction);
+        x.addEventListener("click", someOtherFunction);
+
+        function myFunction(){
+            alert("Hello World!");
+        }
+
+        function someOtherFunction(){
+            alert("이 이벤트도 실행되었습니다 :)");
+        }
+        // function을 호출한 순서대로 이벤트 발생, 예제에서는 alert이 두번 뜬다. 
+    </script>
+</body>
+</html>

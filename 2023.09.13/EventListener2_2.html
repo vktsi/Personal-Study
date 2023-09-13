@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 이벤트 리스너 예제 실습 2-2</title>
+</head>
+<body>
+    <h2>JavaScript addEventListener()</h2>
+    
+    <p>이번 예제는 addEventListener() 메서드를 사용하여 클릭 이벤트를 버튼에 연결하는 예제입니다.</p>
+    
+    <button id="myBtn">Click Me!</button>
+
+    <script>
+        document.getElementById("myBtn").addEventListener("click", myFunction);
+
+        function myFunction(){
+            alert("Hello World!");
+        }
+        // 2번 예제와는 다르게 function을 만들고 적용
+    </script>
+</body>
+</html>
