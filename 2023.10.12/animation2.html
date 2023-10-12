@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 공부 2</title>
+    
+    <style>
+        div{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            animation-name: move, fadeOut, changeColor;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        /* 이동 애니메이션 */
+        @keyframes move {
+            from {
+                left: 0;
+            }
+            to {
+                left: 300px;
+            }
+        }
+
+        /* 투명도 애니메이션 */
+        @keyframes fadeOut {
+            form { opacity: 1; }
+            to { opacity: 0; }
+        }
+
+        /* 색깔 애니메이션 */
+        @keyframes changeColor{
+            from { background-color: red; }
+            to { background-color: blue; }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

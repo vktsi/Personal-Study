@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 공부 3</title>
+
+    <style>
+        div{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background: red;
+            animation: myAnimation 5s infinite;
+            /* animation 프로퍼티를 한꺼번에 지정, 이름, 시간, 재생 횟수 */
+            animation-direction: alternate;
+            /* 홀수번째에는 normal로, 짝수번째에는 reverse로 진행 */
+            /* ex. 첫번째 반복에는 normal, 2번째 반복에는 reverse 3번째 반복에는 ...  */
+        }
+
+        @keyframes myAnimation{
+            0%   { background: red;      left: 0px;      top: 0px; }
+            25%  { background: yellow;   left: 200px;    top: 0px; }
+            50%  { background: blue;     left: 200px;    top: 200px; }
+            75%  { background: green;    left: 0px;      top: 200px; }
+            100% { background: red;      left: 0px;      top: 0px; }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

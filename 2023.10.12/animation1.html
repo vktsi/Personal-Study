@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 공부 1</title>
+    <style>
+        div{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: move;
+            /* @keyframes의 이름 */
+            animation-duration: 5s;
+            /* 한 싸이클의 애니메이션에 소요되는 시간을 초단위 또는 밀리 초 단위로 지정 */
+            animation-iteration-count: infinite;
+            /* 애니메이션 재생 횟수를 지정한다. infinite는 무한 재생을 의미한다. */
+        }
+
+        @keyframes move{
+            /* 애니메이션 시작 지점 */
+            from {
+                left: 0;
+            }
+            /* 애니메이션 종료 시점 */
+            to {
+                left: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
